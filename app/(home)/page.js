@@ -18,9 +18,9 @@ export default async function Home() {
             Early Years Wales supports young children & families to have highly
             positive experiences in early childhood through play, learning and
             care. We do this through our work with early years childcare and
-            education providers, children’s families, and local and national
-            government. For more information on the work we do, please visit our
-            website:{" "}
+            education providers, children&apos;s families, and local and
+            national government. For more information on the work we do, please
+            visit our website:{" "}
             <Link
               href={"https://www.earlyyears.wales/en"}
               className="hover:underline"
