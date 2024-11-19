@@ -6,7 +6,7 @@ export default function HomeLayout({ children }) {
     <div className="bg-slate-100">
       <Header />
       {children}
-      <div className="flex w-full h-[20vh]"></div>
+      <Footer />
     </div>
   );
 }
