@@ -1,12 +1,18 @@
 import { defineField, defineType } from "sanity";
 import { PiPersonArmsSpread } from "react-icons/pi";
-import { PassInput } from "./../components/PassInput";
+import { PinInput } from "../components/PinInput";
 
 export const abahType = defineType({
   name: "abah",
   title: "Active Baby At Home",
   type: "document",
   fields: [
+    defineField({
+      name: "pin",
+      type: "string",
+      description: "Enter a 4 digit pin to protect this content",
+      validation: (rule) => rule.length(4).required(),
+    }),
     defineField({
       name: "title",
       type: "string",

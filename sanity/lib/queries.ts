@@ -65,5 +65,9 @@ export const ABAH_QUERY = defineQuery(
 );
 
 export const ABAH_WEEKLY_QUERY = defineQuery(
-  '*[_type == "abah" && slug.current == $slug][0]{...,resources[]->{headerImage, "slug": slug.current, title}, activities[]->{headerImage, "slug": slug.current, title}, video->{..., "videoUrl": video.asset->url}}'
+  '*[_type == "abah" && slug.current == $slug][0]{slug, title, introduction, headerImage, resources[]->{headerImage, "slug": slug.current, title}, activities[]->{headerImage, "slug": slug.current, title}, video->{..., "videoUrl": video.asset->url}}'
 );
+
+export const GET_ABAH_PIN = defineQuery(
+  '*[_type == "abah" && slug.current == $slug][0]{pin}'
+)

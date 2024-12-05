@@ -14,6 +14,7 @@ import {
   TRAINING_CYM_QUERY,
   ABAH_QUERY,
   ABAH_WEEKLY_QUERY,
+  GET_ABAH_PIN
 } from "../../sanity/lib/queries";
 
 const options = { next: { revalidate: 30 } };
@@ -169,5 +170,14 @@ export async function getAbahWeekly(slug) {
     return training;
   } catch (error) {
     console.error(error);
+  }
+}
+
+export async function getAbahPin(slug){
+  try {
+    const pin = await client.fetch(GET_ABAH_PIN, {slug: slug}, options);
+    return pin;
+  } catch (error) {
+    console.log(error)
   }
 }
