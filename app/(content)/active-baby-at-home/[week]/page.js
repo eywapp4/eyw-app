@@ -19,6 +19,7 @@ export default function Page({ params: { week } }) {
       if (auth) {
         const content = await getAbahWeekly(week);
         setContent(content);
+        console.log(content)
       }
     };
     updateContent();
@@ -62,7 +63,7 @@ export default function Page({ params: { week } }) {
                   <p className="text-3xl md:text-4xl  text-eywnavy-1000 md:mt-20 mt-0 md:mb-4">
                     This Week&apos;s Video
                   </p>
-                  <VideoCard video={content.video} week={week} />
+                  <VideoCard video={content.video} intro={content.introduction}/>
                 </>
               )}
               {content?.resources && (
