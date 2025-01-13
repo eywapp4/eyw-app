@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function VideoCard({ training }) {
-  console.log(training);
   return (
     <Card
       shadow="lg"

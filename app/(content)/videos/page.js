@@ -5,7 +5,6 @@ import { Card } from "@nextui-org/react";
 
 export default async function Page() {
   const trainings = await getTrainings();
-  console.log(trainings);
   return (
     <>
       <ContentHeader

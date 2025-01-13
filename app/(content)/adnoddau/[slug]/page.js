@@ -11,7 +11,6 @@ import { getResourceCym } from "../../../lib/data";
 export default async function Page({ params: { slug } }) {
   //get resource by slug
   const resource = await getResourceCym(slug);
-  console.log(resource);
 
   const components = {
     list: {

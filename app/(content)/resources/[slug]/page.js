@@ -11,7 +11,6 @@ import { getResource } from "../../../lib/data";
 export default async function Page({ params: { slug } }) {
   //get resource by slug
   const resource = await getResource(slug);
-  console.log(resource);
 
   const components = {
     list: {
