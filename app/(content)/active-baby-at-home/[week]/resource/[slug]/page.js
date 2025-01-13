@@ -63,7 +63,7 @@ export default async function Page({ params: { slug } }) {
         <p className="text-2xl text-center m-10 underline font-semibold">
           {resource?.subheading}
         </p>
-        <div className="flex flex-col w-full text-justify text-large px-8 md:px-10 mb-6 ">
+        <div className="flex flex-col w-full text-pretty md:text-justify text-large px-8 md:px-10 mb-6 ">
           <PortableText
             value={resource?.introduction}
             components={components}
@@ -76,7 +76,7 @@ export default async function Page({ params: { slug } }) {
                 className="flex w-full self-center flex-col items-center"
                 key={i}
               >
-                <div className="flex flex-col my-6 text-justify text-white text-large rounded-2xl bg-eywpurple-750 p-10">
+                <div className="flex flex-col my-6 text-pretty md:text-justify text-white text-large rounded-2xl bg-eywpurple-750 p-10">
                   {block.itemTitle && (
                     <p className="font-semibold text-2xl mb-8">
                       {block.itemTitle}

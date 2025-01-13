@@ -11,7 +11,7 @@ export default function Page() {
       />
       <div className="flex w-full flex-col  items-center pb-20">
         <div className="flex flex-col gap-6 md:gap-10 w-[90%] md:w-[75%] ">
-          <Card className="flex flex-col md:w-[75%] self-center text-justify gap-4 text-lg text-eywnavy-1000 mb-10 font-semibold mt-6 md:mt-0 p-5 md:p-10 pt-6 ">
+          <Card className="flex flex-col md:w-[75%] self-center text-pretty md:text-justify gap-4 text-lg text-eywnavy-1000 mb-10 font-semibold mt-6 md:mt-0 p-5 md:p-10 pt-6 ">
             <p className="text-center text-3xl md:text-4xl  text-eywnavy-1000">
               Members and Stakeholders
             </p>

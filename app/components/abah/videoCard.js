@@ -2,8 +2,7 @@ import { Card } from "@nextui-org/react";
 import Player from "next-video/player";
 import { PortableText } from "@portabletext/react";
 
-export default function VideoCard({ video, intro}) {
-
+export default function VideoCard({ video, intro }) {
   const components = {
     list: {
       bullet: ({ children }) => <ul className="list-disc ">{children}</ul>,
@@ -15,13 +14,15 @@ export default function VideoCard({ video, intro}) {
           {children}
         </p>
       ),
-      normal: ({ children }) => <p className="pb-4 text-ju">{children}</p>,
+      normal: ({ children }) => (
+        <p className="pb-4 text-pretty text-left md:text-justify">{children}</p>
+      ),
     },
   };
 
   return (
     <Card
-      className="flex flex-col gap-6 md:min-h-[400px] min-h-[300px] w-[95vw] md:w-[50vw] self-center text-eywnavy-1000 p-2 md:p-6 mb-10 mt-10"
+      className="flex flex-col gap-6 md:min-h-[400px] min-h-[300px] w-[95vw] md:w-[50vw] self-center text-eywnavy-1000 px-4 py-6  md:p-6 mb-10 mt-10"
       shadow="lg"
     >
       <div className="flex justify-center">

@@ -59,7 +59,7 @@ export default async function Page({ params: { slug } }) {
         className="flex w-[95vw] md:w-[50vw] self-center text-eywnavy-1000 p-2 md:p-6 mb-20 mt-10"
         shadow="lg"
       >
-        <div className="flex flex-col w-full text-justify text-large px-8 md:px-10 mb-6 ">
+        <div className="flex flex-col w-full text-pretty md:text-justify text-large px-6 pt-6 md:px-10 mb-6 ">
           <PortableText
             value={training?.introduction}
             components={components}

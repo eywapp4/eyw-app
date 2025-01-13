@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function VideoCard({ training }) {
+  console.log(training);
   return (
     <Card
       shadow="lg"
@@ -11,7 +12,7 @@ export default function VideoCard({ training }) {
       isPressable
       disableRipple
     >
-      <Link href={`/training/${training.slug.current}`}>
+      <Link href={`/videos/${training.slug.current}`}>
         <CardBody>
           <Image
             src={training.imageURL}

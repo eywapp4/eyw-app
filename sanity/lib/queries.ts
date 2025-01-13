@@ -32,7 +32,7 @@ export const ACTIVITY_QUERY = defineQuery(
 
 //returns all training entries, ordered by newest created first
 export const TRAININGS_QUERY = defineQuery(
-  `*[_type == "training" && abahContent != true]| order(_updatedAt desc){slug, title, headerImage}`
+  `*[_type == "training" && abahContent != true]| order(_updatedAt desc){slug, title, "imageURL": headerImage.asset->url}`
 );
 
 //returns the requested training entry by slug and joins the video asset url
@@ -70,4 +70,4 @@ export const ABAH_WEEKLY_QUERY = defineQuery(
 
 export const GET_ABAH_PIN = defineQuery(
   '*[_type == "abah" && slug.current == $slug][0]{pin}'
-)
+);

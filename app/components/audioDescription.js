@@ -30,7 +30,7 @@ export function AudioDescription() {
         <Button
           isIconOnly
           onClick={() => stopSpeech()}
-          className="absolute right-0 top-6 bg-transparent"
+          className="absolute top-0 right-0 bg-transparent"
           is
         >
           <PiSpeakerXFill size={48} className="text-eywnavy-1000" />
@@ -39,7 +39,7 @@ export function AudioDescription() {
         <Button
           isIconOnly
           onClick={() => startSpeech()}
-          className="absolute right-0 top-6 bg-transparent"
+          className="absolute top-0 right-0 bg-transparent"
           is
         >
           <PiSpeakerHighFill size={48} className="text-eywnavy-1000" />

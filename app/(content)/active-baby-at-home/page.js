@@ -16,10 +16,10 @@ export default async function Page() {
         bgColour={"from-eywteal-500"}
       />
       <div className="flex w-full flex-col  items-center pb-20">
-        <div className="flex flex-col gap-6 md:gap-10 w-[90%] md:w-[75%] text-center ">
+        <div className="flex flex-col gap-6 md:gap-10 w-[90%] md:w-[75%]  ">
           <Card
             shadow="lg"
-            className="flex flex-col md:w-[75%] self-center text-justify gap-6 text-lg text-eywnavy-1000 mb-10 font-semibold mt-16 md:mt-0 p-4 md:p-10 pt-6"
+            className="flex flex-col md:w-[75%] self-center text-pretty md:text-justify gap-6 text-lg text-eywnavy-1000 mb-10 font-semibold mt-24 md:mt-0 p-4 md:p-10 pt-6"
           >
             <p className="text-center text-3xl md:text-4xl  text-eywnavy-1000">
               About

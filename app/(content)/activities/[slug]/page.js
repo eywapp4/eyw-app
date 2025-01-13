@@ -57,21 +57,21 @@ export default async function Page({ params: { slug } }) {
         </div>
       </div>
       <Card
-        className="flex w-[95vw] md:w-[50vw] self-center text-eywnavy-1000 p-2 md:p-6 mb-20 mt-10"
+        className="flex w-[95vw] md:w-[50vw] self-center text-eywnavy-1000 p-2 pt-6 md:p-6 mb-20 mt-10"
         shadow="lg"
       >
-        <div className="flex flex-col w-full text-justify text-large px-8 md:px-10 mb-6 ">
+        <div className="flex flex-col w-full text-pretty md:text-justify text-large px-8 md:px-10 mb-6 ">
           <PortableText
             value={activity?.introduction}
             components={components}
           />
         </div>
-        <div className="flex flex-col w-full text-justify text-large rounded-2xl bg-eywcoral-1000/85 text-white p-8 md:p-10">
+        <div className="flex flex-col w-full text-pretty md:text-justify text-large rounded-2xl bg-eywcoral-1000/85 text-white p-8 md:p-10">
           <p className="text-3xl font-semibold pb-4">Method</p>
           <PortableText value={activity?.method} components={components} />
         </div>
         {activity.tip && (
-          <div className="flex flex-col w-full text-justify text-large rounded-2xl bg-eywteal-1000/85 text-white p-10 mt-6 relative">
+          <div className="flex flex-col w-full text-pretty md:text-justify text-large rounded-2xl bg-eywteal-1000/85 text-white p-10 mt-6 relative">
             <MdOutlineTipsAndUpdates
               className="absolute top-2 right-2 text-eywyellow-750 origin-center "
               size={54}
