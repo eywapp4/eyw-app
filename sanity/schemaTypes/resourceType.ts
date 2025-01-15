@@ -1,11 +1,11 @@
 import { defineField, defineType, Preview } from "sanity";
-import { BsFileEarmarkText } from "react-icons/bs";
+import { PiPersonArmsSpread } from "react-icons/pi";
 
 export const resourceType = defineType({
   name: "resource",
-  title: "Resources",
+  title: "Activities",
   type: "document",
-  icon: BsFileEarmarkText,
+  icon: PiPersonArmsSpread,
   fields: [
     defineField({
       name: "title",

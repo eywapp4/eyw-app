@@ -26,16 +26,14 @@ export default async function Home() {
             </Link>
           </p>
         </Card>
-        <p className="text-3xl md:text-4xl  text-eywnavy-1000">Resources</p>
+        <p className="text-3xl md:text-4xl  text-eywnavy-1000">Activities</p>
         <div className="flex flex-row gap-6 flex-wrap justify-center ">
           {resources &&
             resources.map((resource, i) => (
               <ResourceCard resource={resource} key={i} />
             ))}
         </div>
-        <p className="text-3xl md:text-4xl text-eywnavy-1000 mt-10">
-          Activities
-        </p>
+        <p className="text-3xl md:text-4xl text-eywnavy-1000 mt-10">Blog</p>
         <div className="flex flex-row gap-6 flex-wrap justify-center">
           {activities &&
             activities.map((activity, i) => (

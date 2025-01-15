@@ -1,11 +1,11 @@
 import { defineField, defineType } from "sanity";
-import { PiPersonArmsSpread } from "react-icons/pi";
+import { BsFileEarmarkText } from "react-icons/bs";
 
 export const activityType = defineType({
   name: "activity",
-  title: "Activities",
+  title: "Blog",
   type: "document",
-  icon: PiPersonArmsSpread,
+  icon: BsFileEarmarkText,
   fields: [
     defineField({
       name: "title",

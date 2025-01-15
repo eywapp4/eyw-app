@@ -8,7 +8,7 @@ export default async function Page() {
   return (
     <>
       <ContentHeader
-        title={"Activities"}
+        title={"Blog"}
         textColour={"eywnavy-1000"}
         bgColour={"from-eywteal-500"}
       />

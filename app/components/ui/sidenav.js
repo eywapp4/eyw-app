@@ -46,16 +46,17 @@ export default function Sidenav({ isOpen, toggleDrawer }) {
             href={"/resources"}
             className="flex flex-row items-center mb-6 text-eywpurple-1000"
           >
-            <BsFileEarmarkText size={46} />
-            <p className="pl-6 text-3xl  hover:underline">Resources</p>
+            <PiPersonArmsSpread size={46} />
+
+            <p className="pl-6 text-3xl  hover:underline">Activities</p>
           </Link>
 
           <Link
             href={"/activities"}
             className="flex flex-row items-center mb-6 text-eywblue-1000"
           >
-            <PiPersonArmsSpread size={46} />
-            <p className="pl-6 text-3xl  hover:underline">Activities</p>
+            <BsFileEarmarkText size={46} />
+            <p className="pl-6 text-3xl  hover:underline">Blog</p>
           </Link>
 
           <div className="flex w-full h-0.5 bg-gray-200 mb-6"></div>
@@ -123,16 +124,16 @@ export default function Sidenav({ isOpen, toggleDrawer }) {
             href={"/resources"}
             className="flex flex-row items-center mb-8 text-eywpurple-1000"
           >
-            <BsFileEarmarkText size={46} />
-            <p className="pl-6  hover:underline">Resources</p>
+            <PiPersonArmsSpread size={46} />
+            <p className="pl-6  hover:underline">Activities</p>
           </Link>
 
           <Link
             href={"/activities"}
             className="flex flex-row items-center mb-6 text-eywblue-1000"
           >
-            <PiPersonArmsSpread size={46} />
-            <p className="pl-6  hover:underline">Activities</p>
+            <BsFileEarmarkText size={46} />
+            <p className="pl-6  hover:underline">Blog</p>
           </Link>
 
           <div className="flex w-full h-0.5 bg-gray-200 mb-6"></div>
