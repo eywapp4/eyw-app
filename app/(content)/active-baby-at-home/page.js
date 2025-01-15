@@ -47,7 +47,7 @@ export default async function Page() {
               parents/carers who have already enrolled onto an Active Baby at
               Home programme.
             </p>
-            <p className="text-base md:text-lg text-center">
+            <p className="text-base font-extrabold md:text-lg text-center">
               Please contact us if you have any queries:
               training@earlyyears.wales
             </p>
