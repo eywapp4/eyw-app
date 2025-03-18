@@ -1,3 +1,4 @@
+import { defineQuery } from "next-sanity";
 import { client } from "../../sanity/lib/client";
 import {
   HOME_ACTIVITIES_QUERY,
@@ -14,7 +15,8 @@ import {
   TRAINING_CYM_QUERY,
   ABAH_QUERY,
   ABAH_WEEKLY_QUERY,
-  GET_ABAH_PIN
+  GET_ABAH_PIN,
+  GET_PAGE_INTRO,
 } from "../../sanity/lib/queries";
 
 const options = { next: { revalidate: 30 } };
@@ -173,11 +175,22 @@ export async function getAbahWeekly(slug) {
   }
 }
 
-export async function getAbahPin(slug){
+export async function getAbahPin(slug) {
   try {
-    const pin = await client.fetch(GET_ABAH_PIN, {slug: slug}, options);
+    const pin = await client.fetch(GET_ABAH_PIN, { slug: slug }, options);
     return pin;
   } catch (error) {
-    console.log(error)
+    console.log(error);
+  }
+}
+
+export async function getIntro(page) {
+  try {
+    const QUERY = defineQuery(`*[_id == "pageIntro" ][0]{${page}}`);
+    const intro = await client.fetch(QUERY, {}, options);
+    console.log(intro);
+    return intro;
+  } catch (err) {
+    console.log(err);
   }
 }

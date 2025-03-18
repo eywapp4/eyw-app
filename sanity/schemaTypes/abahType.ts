@@ -1,6 +1,4 @@
 import { defineField, defineType } from "sanity";
-import { PiPersonArmsSpread } from "react-icons/pi";
-import { PinInput } from "../components/PinInput";
 
 export const abahType = defineType({
   name: "abah",

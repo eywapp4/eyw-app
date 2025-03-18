@@ -71,3 +71,6 @@ export const ABAH_WEEKLY_QUERY = defineQuery(
 export const GET_ABAH_PIN = defineQuery(
   '*[_type == "abah" && slug.current == $slug][0]{pin}'
 );
+
+//returns the intro for a given page
+export const GET_PAGE_INTRO = defineQuery('*[_type == "pageIntro" ][0]');

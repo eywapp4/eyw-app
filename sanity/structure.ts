@@ -14,4 +14,13 @@ export const structure: StructureResolver = (S) =>
       S.documentTypeListItem("hyfforddi"),
       S.divider(),
       S.documentTypeListItem("abah"),
+      S.divider(),
+      S.listItem()
+        .title("Page Intros")
+        .child(
+          S.document()
+            .schemaType("pageIntro")
+            .documentId("pageIntro")
+            .title("Page Introductions")
+        ),
     ]);
