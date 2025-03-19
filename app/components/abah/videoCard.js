@@ -29,7 +29,7 @@ export default function VideoCard({ video, intro }) {
         <p className="text-2xl">{video.title}</p>
       </div>
       <PortableText value={intro} components={components} />
-      <div className="flex rounded-xl ">
+      <div className="flex rounded-lg overflow-hidden">
         <Player src={video.videoUrl} />
       </div>
     </Card>

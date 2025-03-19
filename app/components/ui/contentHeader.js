@@ -21,7 +21,7 @@ export default function ContentHeader({ title, textColour, bgColour }) {
           <Button
             isIconOnly
             className={`bg-transparent text-${textColour}`}
-            onClick={toggleDrawer}
+            onPress={toggleDrawer}
             disableRipple={true}
           >
             <IoMenu size={36} />

@@ -7,10 +7,13 @@ import RelatedActivities from "../../../../../components/activities/relatedActiv
 import { AudioDescription } from "../../../../../components/audioDescription";
 import { Back } from "../../../../../components/ui/back";
 import { getResource } from "../../../../../lib/data";
+import { File, Download } from "lucide-react";
 
 export default async function Page({ params: { slug } }) {
   //get resource by slug
   const resource = await getResource(slug);
+  let resources;
+  if (resource.resources) resources = resource.resources;
 
   const components = {
     list: {
@@ -104,6 +107,31 @@ export default async function Page({ params: { slug } }) {
               </div>
             );
           })}
+        {resources && (
+          <div className="flex w-full flex-col gap-10 my-10">
+            <p className="text-3xl font-semibold self-center">
+              Additional Resources
+            </p>
+
+            <div className="flex flex-col gap-4">
+              {resources.map((resource, index) => (
+                <a
+                  key={index}
+                  href={`${resource.url}?dl=`}
+                  className="w-full flex flex-row justify-between bg-gray-100 p-4 rounded-xl hover:underline"
+                >
+                  <div className="flex flex-row gap-4">
+                    <File />
+                    <p className="text-eywnavy-1000">
+                      {resource.originalFilename}
+                    </p>
+                  </div>
+                  <Download />
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
         <div className="flex h-[75px] relative mt-10">
           <Image
             src={"/logos/Logo Full Colour.png"}

@@ -6,12 +6,12 @@ import { Button } from "@nextui-org/react";
 export function AudioDescription() {
   const [text, setText] = useState(null);
   const [speaking, setSpeaking] = useState(false);
+  const [synth, setSynth] = useState(null);
 
   useEffect(() => {
+    setSynth(window.speechSynthesis);
     setText(document.body.innerText);
   }, []);
-
-  const synth = window.speechSynthesis;
 
   const startSpeech = () => {
     const utterThis = new SpeechSynthesisUtterance(text);
@@ -29,7 +29,7 @@ export function AudioDescription() {
       {speaking ? (
         <Button
           isIconOnly
-          onClick={() => stopSpeech()}
+          onPress={() => stopSpeech()}
           className="absolute top-0 right-0 bg-transparent"
           is
         >
@@ -38,7 +38,7 @@ export function AudioDescription() {
       ) : (
         <Button
           isIconOnly
-          onClick={() => startSpeech()}
+          onPress={() => startSpeech()}
           className="absolute top-0 right-0 bg-transparent"
           is
         >

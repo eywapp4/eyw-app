@@ -7,10 +7,15 @@ import { urlFor } from "../../../../../../sanity/lib/image";
 import { AudioDescription } from "../../../../../components/audioDescription";
 import { Back } from "../../../../../components/ui/back";
 import { getAcitvity } from "../../../../../lib/data";
+import { File, Download } from "lucide-react";
 
 export default async function Page({ params: { slug } }) {
   //get activity by slug
   const activity = await getAcitvity(slug);
+  let resources;
+  if (activity.resources) resources = activity.resources;
+  let galleryImages;
+  if (activity.galleryImages) galleryImages = activity.galleryImages;
 
   const components = {
     list: {
@@ -80,35 +85,63 @@ export default async function Page({ params: { slug } }) {
             <PortableText value={activity?.tip} components={components} />
           </div>
         )}
-        <div className="flex w-full flex-col my-20">
-          <p className="text-3xl font-semibold mb-10 self-center">
-            Activity Gallery
-          </p>
-          <div className="flex flex-wrap gap-6 justify-center text-center">
-            {activity.galleryImages?.map((image, i) => (
-              <div className="flex flex-col w-[90%] md:w-[48%]" key={i}>
-                <div className="flex w-full h-[300px] relative">
-                  <Image
-                    src={urlFor(image)
-                      .height(400)
-                      .fit("clip")
-                      .auto("format")
-                      .url()}
-                    fill
-                    key={image._key}
-                    className="object-cover rounded-xl "
-                    alt="Activity gallery image"
-                    quality={70}
-                  />
-                  <p className="absolute bottom-5 right-5 text-slate-500 text-xs">
-                    {image.attribution}
-                  </p>
+        {galleryImages && (
+          <div className="flex w-full flex-col my-20">
+            <p className="text-3xl font-semibold mb-10 self-center">
+              Activity Gallery
+            </p>
+            <div className="flex flex-wrap gap-6 justify-center text-center">
+              {activity.galleryImages?.map((image, i) => (
+                <div className="flex flex-col w-[90%] md:w-[48%]" key={i}>
+                  <div className="flex w-full h-[300px] relative">
+                    <Image
+                      src={urlFor(image)
+                        .height(400)
+                        .fit("clip")
+                        .auto("format")
+                        .url()}
+                      fill
+                      key={image._key}
+                      className="object-cover rounded-xl "
+                      alt="Activity gallery image"
+                      quality={70}
+                    />
+                    <p className="absolute bottom-5 right-5 text-slate-500 text-xs">
+                      {image.attribution}
+                    </p>
+                  </div>
+                  <p className="mt-4">{image.caption}</p>
                 </div>
-                <p className="mt-4">{image.caption}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
+        )}
+        {resources && (
+          <div className="flex w-full flex-col gap-10 mb-10">
+            <p className="text-3xl font-semibold self-center">
+              Additional Resources
+            </p>
+
+            <div className="flex flex-col gap-4">
+              {resources.map((resource, index) => (
+                <a
+                  key={index}
+                  href={`${resource.url}?dl=`}
+                  className="w-full flex flex-row justify-between bg-gray-100 p-4 rounded-xl hover:underline"
+                >
+                  <div className="flex flex-row gap-4">
+                    <File />
+                    <p className="text-eywnavy-1000">
+                      {resource.originalFilename}
+                    </p>
+                  </div>
+                  <Download />
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+
         <div className="flex h-[50px] relative mt-10">
           <Image
             src={"/logos/Logo Full Colour.png"}

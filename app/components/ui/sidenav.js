@@ -6,6 +6,7 @@ import { IoVideocamOutline, IoHomeOutline } from "react-icons/io5";
 import { BsFileEarmarkText } from "react-icons/bs";
 import { PiPersonArmsSpread } from "react-icons/pi";
 import { HiOutlineExternalLink } from "react-icons/hi";
+import { Sprout } from "lucide-react";
 
 export default function Sidenav({ isOpen, toggleDrawer }) {
   return (
@@ -72,6 +73,14 @@ export default function Sidenav({ isOpen, toggleDrawer }) {
               alt="Foot icon"
             />
             <p className="pl-6 text-3xl hover:underline">Active Baby At Home</p>
+          </Link>
+
+          <Link
+            href={"/active-baby-at-home"}
+            className="flex flex-row  items-center mb-6 text-eywteal-1000"
+          >
+            <Sprout size={55} strokeWidth={1.5} />
+            <p className="pl-6 text-3xl hover:underline">Growing Movers</p>
           </Link>
 
           <div className="flex w-full h-0.5 bg-gray-200 mb-6"></div>
@@ -149,6 +158,14 @@ export default function Sidenav({ isOpen, toggleDrawer }) {
               alt="Foot icon"
             />
             <p className="pl-6  hover:underline">Active Baby At Home</p>
+          </Link>
+
+          <Link
+            href={"/active-baby-at-home"}
+            className="flex flex-row  items-center mb-6 text-eywteal-1000"
+          >
+            <Sprout size={55} strokeWidth={1.5} />
+            <p className="pl-6  hover:underline">Growing Movers</p>
           </Link>
 
           <div className="flex w-full h-0.5 bg-gray-200 mb-6"></div>

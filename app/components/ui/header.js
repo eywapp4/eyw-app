@@ -19,7 +19,7 @@ export default function Header() {
           <Button
             isIconOnly
             className="bg-transparent"
-            onClick={toggleDrawer}
+            onPress={toggleDrawer}
             disableRipple={true}
           >
             <IoMenu size={36} color="#2D3E6E" />

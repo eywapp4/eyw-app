@@ -188,7 +188,6 @@ export async function getIntro(page) {
   try {
     const QUERY = defineQuery(`*[_id == "pageIntro" ][0]{${page}}`);
     const intro = await client.fetch(QUERY, {}, options);
-    console.log(intro);
     return intro;
   } catch (err) {
     console.log(err);

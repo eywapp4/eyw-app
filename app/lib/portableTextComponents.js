@@ -5,7 +5,9 @@ export const introComponents = {
       <div className="text-center w-full">{children}</div>
     ),
     right: ({ children }) => <div className="text-right">{children}</div>,
-    justify: ({ children }) => <div className="text-justify">{children}</div>,
+    justify: ({ children }) => (
+      <div className="md:text-justify text-balanced">{children}</div>
+    ),
   },
   list: {
     bullet: ({ children }) => <ul className="list-disc ">{children}</ul>,

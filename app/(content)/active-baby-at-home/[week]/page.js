@@ -1,9 +1,8 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { urlFor } from "../../../../sanity/lib/image";
-import ActivityCard from "../../../components/abah/activityCard";
-import ResourceCard from "../../../components/abah/resourceCard";
+
+import { ContentCard } from "../../../components/ui/ContentCard";
 import VideoCard from "../../../components/abah/videoCard";
 import WeekForm from "../../../components/abah/weekForm";
 import { Back } from "../../../components/ui/back";
@@ -22,7 +21,7 @@ export default function Page({ params: { week } }) {
       }
     };
     updateContent();
-  }, [auth]);
+  }, [auth, week]);
 
   return (
     <>
@@ -30,11 +29,7 @@ export default function Page({ params: { week } }) {
         <>
           <div className="flex w-full relative h-[35vh]">
             <Image
-              src={urlFor(content?.headerImage)
-                .width(1000)
-                .fit("clip")
-                .auto("format")
-                .url()}
+              src={content.imageURL}
               fill={true}
               className="object-cover"
               alt="Activity header image"
@@ -56,7 +51,7 @@ export default function Page({ params: { week } }) {
             </div>
           </div>
           <div className="flex flex-col w-full items-center text-center min-h-[100vh] mt-10 pb-10">
-            <div className="flex flex-col w-[90%] md:w-[75%] text-center font-semibold content-center">
+            <div className="flex flex-col w-[95vw] md:w-[75%] text-center font-semibold content-center">
               {content?.video && (
                 <>
                   <p className="text-3xl md:text-4xl  text-eywnavy-1000 md:mt-20 mt-0 md:mb-4">
@@ -73,9 +68,14 @@ export default function Page({ params: { week } }) {
                   <p className="text-3xl md:text-4xl  text-eywnavy-1000 md:mt-10 mt-0 mb-8 md:mb-8">
                     Resources
                   </p>
-                  <div className="flex flex-row w-[90%] md:w-[75%]  gap-6 flex-wrap self-center justify-center">
+                  <div className="flex flex-row w-full md:w-[75%]  gap-6 flex-wrap self-center justify-center">
                     {content.resources.map((resource, i) => (
-                      <ResourceCard resource={resource} key={i} week={week} />
+                      <ContentCard
+                        key={i}
+                        href={`/active-baby-at-home/${week}/resource/${resource.slug}`}
+                        src={resource.imageURL}
+                        title={resource.title}
+                      />
                     ))}
                   </div>
                 </>
@@ -85,9 +85,14 @@ export default function Page({ params: { week } }) {
                   <p className="text-3xl md:text-4xl  text-eywnavy-1000 md:mt-20 mt-10 mb-8 md:mb-8">
                     Activities
                   </p>
-                  <div className="flex flex-row w-[90%] md:w-[75%]  gap-6 flex-wrap self-center justify-center">
+                  <div className="flex flex-row w-full md:w-[75%]  gap-6 flex-wrap self-center justify-center">
                     {content.activities.map((activity, i) => (
-                      <ActivityCard activity={activity} key={i} week={week} />
+                      <ContentCard
+                        key={i}
+                        href={`/active-baby-at-home/${week}/activity/${activity.slug}`}
+                        src={activity.imageURL}
+                        title={activity.title}
+                      />
                     ))}
                   </div>
                 </>

@@ -9,7 +9,7 @@ export function Back() {
     <Button
       isIconOnly
       className="bg-transparent self-start md:self-center mt-7 md:mt-0"
-      onClick={() => router.back()}
+      onPress={() => router.back()}
       disableRipple={true}
     >
       <IoArrowBack size={36} color="#2D3E6E" />

@@ -60,5 +60,16 @@ export const trainingType = defineType({
       type: "reference",
       to: [{ type: "hyfforddi" }],
     }),
+    defineField({
+      name: "resources",
+      title: "Additional Downloadable Resources",
+      type: "array",
+      of: [
+        {
+          type: "file",
+          name: "file",
+        },
+      ],
+    }),
   ],
 });

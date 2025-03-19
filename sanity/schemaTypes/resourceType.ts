@@ -101,5 +101,16 @@ export const resourceType = defineType({
       type: "reference",
       to: [{ type: "adnodd" }],
     }),
+    defineField({
+      name: "resources",
+      title: "Additional Downloadable Resources",
+      type: "array",
+      of: [
+        {
+          type: "file",
+          name: "file",
+        },
+      ],
+    }),
   ],
 });
