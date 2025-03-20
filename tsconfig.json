@@ -26,7 +26,8 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "app/components/audioDescription.js"
+    "app/components/audioDescription.js",
+    "app/(content)/faqs/page.js"
   ],
   "exclude": ["node_modules"]
 }

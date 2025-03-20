@@ -65,7 +65,13 @@ export const pageIntro = defineType({
     }),
     defineField({
       name: "abah",
-      title: "Acive Baby At Home",
+      title: "Active Baby At Home",
+      type: "array",
+      of: [block],
+    }),
+    defineField({
+      name: "movers",
+      title: "Growing Movers",
       type: "array",
       of: [block],
     }),

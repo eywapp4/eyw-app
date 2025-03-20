@@ -16,7 +16,10 @@ import {
   ABAH_QUERY,
   ABAH_WEEKLY_QUERY,
   GET_ABAH_PIN,
-  GET_PAGE_INTRO,
+  MOVERS_PIN,
+  MOVERS_QUERY,
+  MOVERS_WEEKLY_QUERY,
+  GET_FAQS,
 } from "../../sanity/lib/queries";
 
 const options = { next: { revalidate: 30 } };
@@ -183,6 +186,36 @@ export async function getAbahPin(slug) {
     console.log(error);
   }
 }
+export async function getMovers() {
+  try {
+    const abah = await client.fetch(MOVERS_QUERY, {}, options);
+    return abah;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function getMoversWeekly(slug) {
+  try {
+    const training = await client.fetch(
+      MOVERS_WEEKLY_QUERY,
+      { slug: slug },
+      options
+    );
+    return training;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export async function getMoversPin(slug) {
+  try {
+    const pin = await client.fetch(MOVERS_PIN, { slug: slug }, options);
+    return pin;
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 export async function getIntro(page) {
   try {
@@ -191,5 +224,14 @@ export async function getIntro(page) {
     return intro;
   } catch (err) {
     console.log(err);
+  }
+}
+
+export async function getFaqs() {
+  try {
+    const faqs = await client.fetch(GET_FAQS, {}, options);
+    return faqs[0].faqs;
+  } catch (error) {
+    console.log(error);
   }
 }

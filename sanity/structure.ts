@@ -1,5 +1,8 @@
 import type { StructureResolver } from "sanity/structure";
 
+import { BookOpen } from "lucide-react";
+import { HelpCircle } from "lucide-react";
+
 // https://www.sanity.io/docs/structure-builder-cheat-sheet
 export const structure: StructureResolver = (S) =>
   S.list()
@@ -14,13 +17,21 @@ export const structure: StructureResolver = (S) =>
       S.documentTypeListItem("hyfforddi"),
       S.divider(),
       S.documentTypeListItem("abah"),
+      S.documentTypeListItem("movers"),
       S.divider(),
       S.listItem()
         .title("Page Intros")
+        .icon(BookOpen)
         .child(
           S.document()
             .schemaType("pageIntro")
             .documentId("pageIntro")
             .title("Page Introductions")
+        ),
+      S.listItem()
+        .title("FAQs")
+        .icon(HelpCircle)
+        .child(
+          S.document().schemaType("faqs").documentId("faqs").title("FAQs")
         ),
     ]);

@@ -21,10 +21,11 @@ export const activityType = defineType({
       hidden: ({ document }) => !document?.title,
     }),
     defineField({
-      name: "abahContent",
-      title: "Active Baby At Home Content?",
+      name: "programContent",
+      title: "Program Content?",
       type: "boolean",
-      description: "Set this to active in order to hide the content",
+      description:
+        "Set this to active in order to hide Active Baby At Home and Growing Movers content",
       initialValue: false,
       validation: (rule) => rule.required(),
     }),

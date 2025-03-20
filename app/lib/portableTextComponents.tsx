@@ -1,4 +1,6 @@
-export const introComponents = {
+import type { PortableTextReactComponents } from "@portabletext/react";
+
+export const introComponents: Partial<PortableTextReactComponents> = {
   marks: {
     left: ({ children }) => <div className="text-left">{children}</div>,
     center: ({ children }) => (

@@ -8,6 +8,8 @@ import { adnoddType } from "./adnoddType";
 import { hyfforddiType } from "./hyfforddiType";
 import { abahType } from "./abahType";
 import { pageIntro } from "./pageIntro";
+import { moversType } from "./moversType";
+import { faqType } from "./faqType";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -19,5 +21,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     hyfforddiType,
     abahType,
     pageIntro,
+    moversType,
+    faqType,
   ],
 };

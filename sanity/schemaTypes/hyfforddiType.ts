@@ -3,7 +3,7 @@ import { IoVideocamOutline } from "react-icons/io5";
 
 export const hyfforddiType = defineType({
   name: "hyfforddi",
-  title: "Hyfforddiant",
+  title: "Fideos",
   type: "document",
   icon: IoVideocamOutline,
   fields: [
