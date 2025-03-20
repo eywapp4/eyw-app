@@ -10,6 +10,7 @@ import { abahType } from "./abahType";
 import { pageIntro } from "./pageIntro";
 import { moversType } from "./moversType";
 import { faqType } from "./faqType";
+import { instructionsType } from "./instructionsType";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -23,5 +24,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     pageIntro,
     moversType,
     faqType,
+    instructionsType,
   ],
 };

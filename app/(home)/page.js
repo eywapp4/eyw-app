@@ -1,12 +1,19 @@
 import { ContentCard } from "../components/ui/ContentCard";
-import { getHomeActivities, getHomeResources, getIntro } from "../lib/data";
+import {
+  getHomeActivities,
+  getHomeResources,
+  getInstructions,
+  getIntro,
+} from "../lib/data";
 import { Card } from "@nextui-org/react";
 import { PortableText } from "next-sanity";
 import { introComponents } from "../lib/portableTextComponents";
+import { Instructions } from "../components/ui/Instructions";
 
 export default async function Home() {
   const resources = await getHomeResources();
   const activities = await getHomeActivities();
+  const instructions = await getInstructions();
   const introData = await getIntro("home");
   let intro;
   if (introData) intro = introData.home;
@@ -49,6 +56,7 @@ export default async function Home() {
             ))}
         </div>
       </div>
+      <Instructions instructions={instructions} />
     </div>
   );
 }

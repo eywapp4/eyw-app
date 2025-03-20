@@ -1,7 +1,6 @@
 import type { StructureResolver } from "sanity/structure";
 
-import { BookOpen } from "lucide-react";
-import { HelpCircle } from "lucide-react";
+import { BookOpen, Pointer, HelpCircle } from "lucide-react";
 
 // https://www.sanity.io/docs/structure-builder-cheat-sheet
 export const structure: StructureResolver = (S) =>
@@ -33,5 +32,14 @@ export const structure: StructureResolver = (S) =>
         .icon(HelpCircle)
         .child(
           S.document().schemaType("faqs").documentId("faqs").title("FAQs")
+        ),
+      S.listItem()
+        .title("App Instructions")
+        .icon(Pointer)
+        .child(
+          S.document()
+            .schemaType("instructions")
+            .documentId("instructions")
+            .title("App Instructions")
         ),
     ]);

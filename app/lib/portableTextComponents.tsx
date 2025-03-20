@@ -12,12 +12,25 @@ export const introComponents: Partial<PortableTextReactComponents> = {
     ),
   },
   list: {
-    bullet: ({ children }) => <ul className="list-disc ">{children}</ul>,
-    number: ({ children }) => <ol className="list-decimal">{children}</ol>,
+    bullet: ({ children }) => (
+      <ul className="list-disc list-inside">{children}</ul>
+    ),
+    number: ({ children }) => (
+      <ol className="list-decimal list-inside">{children}</ol>
+    ),
   },
   block: {
     h1: ({ children }) => (
       <div className="text-3xl md:text-4xl  text-eywnavy-1000">{children}</div>
+    ),
+    h2: ({ children }) => (
+      <div className="text-2xl md:text-3xl  text-eywnavy-1000">{children}</div>
+    ),
+    h3: ({ children }) => (
+      <div className="text-xl md:text-2xl  text-eywnavy-1000">{children}</div>
+    ),
+    h4: ({ children }) => (
+      <div className="text-lg md:text-xl  text-eywnavy-1000">{children}</div>
     ),
     normal: ({ children }) => <div className="py-4">{children}</div>,
   },

@@ -90,3 +90,8 @@ export const GET_PAGE_INTRO = defineQuery('*[_type == "pageIntro" ][0]');
 
 //get the faqs
 export const GET_FAQS = defineQuery(`*[_type == "faqs"]{faqs}`);
+
+//get the app instructions
+export const GET_INSTRUCTIONS = defineQuery(
+  `*[_type == "instructions"][0]{instructions}`
+);

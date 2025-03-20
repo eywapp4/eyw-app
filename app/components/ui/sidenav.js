@@ -8,8 +8,6 @@ import { PiPersonArmsSpread } from "react-icons/pi";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { HelpCircle, Sprout } from "lucide-react";
 
-import FootprintIcon from "../../../public/abah/FootprintIcon.svg";
-
 export default function Sidenav({ isOpen, toggleDrawer }) {
   return (
     <>

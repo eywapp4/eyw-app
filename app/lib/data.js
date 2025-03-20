@@ -20,6 +20,7 @@ import {
   MOVERS_QUERY,
   MOVERS_WEEKLY_QUERY,
   GET_FAQS,
+  GET_INSTRUCTIONS,
 } from "../../sanity/lib/queries";
 
 const options = { next: { revalidate: 30 } };
@@ -231,6 +232,15 @@ export async function getFaqs() {
   try {
     const faqs = await client.fetch(GET_FAQS, {}, options);
     return faqs[0].faqs;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function getInstructions() {
+  try {
+    const instructions = await client.fetch(GET_INSTRUCTIONS, {}, options);
+    return instructions.instructions;
   } catch (error) {
     console.log(error);
   }
