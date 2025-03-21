@@ -6,16 +6,18 @@ import { IoVideocamOutline, IoHomeOutline } from "react-icons/io5";
 import { BsFileEarmarkText } from "react-icons/bs";
 import { PiPersonArmsSpread } from "react-icons/pi";
 import { HiOutlineExternalLink } from "react-icons/hi";
+import { HelpCircle, Sprout } from "lucide-react";
 
 export default function Sidenav({ isOpen, toggleDrawer }) {
   return (
     <>
+      {/* Desktop Nav */}
       <Drawer
         open={isOpen}
         onClose={toggleDrawer}
         direction="left"
         size={"350px"}
-        className="relative md:block hidden"
+        className="relative md:block hidden overflow-y-auto"
         overlayOpacity={0.6}
       >
         <Image
@@ -74,26 +76,39 @@ export default function Sidenav({ isOpen, toggleDrawer }) {
             <p className="pl-6 text-3xl hover:underline">Active Baby At Home</p>
           </Link>
 
+          <Link
+            href={"/growing-movers"}
+            className="flex flex-row  items-center mb-6 text-eywteal-1000"
+          >
+            <Sprout size={55} strokeWidth={1.5} />
+            <p className="pl-6 text-3xl hover:underline">Growing Movers</p>
+          </Link>
+
           <div className="flex w-full h-0.5 bg-gray-200 mb-6"></div>
 
+          <Link
+            href={"/faqs"}
+            className="flex flex-row items-center mb-6 text-eywnavy-1000"
+          >
+            <HelpCircle size={46} strokeWidth={1.5} />
+            <p className="pl-6 text-3xl  hover:underline">FAQS</p>
+          </Link>
           <Link
             href={"https://www.earlyyears.wales/en/supporting-you-0"}
             className="flex flex-row items-center mb-6 text-eywnavy-1000"
           >
-            <HiOutlineExternalLink size={46} />
+            <HiOutlineExternalLink size={46} strokeWidth={1.7} />
             <p className="pl-6 text-3xl  hover:underline">Supporting You</p>
           </Link>
         </div>
-        <p className="absolute bottom-2 left-[25%] text-center">
-          ©Early Years Wales
-        </p>
       </Drawer>
+      {/* Mobile Nav */}
       <Drawer
         open={isOpen}
         onClose={toggleDrawer}
         direction="left"
         size={"80vw"}
-        className="relative block md:hidden"
+        className="relative block md:hidden overflow-y-auto"
         overlayOpacity={0.2}
       >
         <Image
@@ -151,7 +166,22 @@ export default function Sidenav({ isOpen, toggleDrawer }) {
             <p className="pl-6  hover:underline">Active Baby At Home</p>
           </Link>
 
+          <Link
+            href={"/growing-movers"}
+            className="flex flex-row  items-center mb-6 text-eywteal-1000"
+          >
+            <Sprout size={55} strokeWidth={1.5} />
+            <p className="pl-6  hover:underline">Growing Movers</p>
+          </Link>
+
           <div className="flex w-full h-0.5 bg-gray-200 mb-6"></div>
+          <Link
+            href={"/faqs"}
+            className="flex flex-row items-center mb-6 text-eywnavy-1000"
+          >
+            <HelpCircle size={46} strokeWidth={1.5} />
+            <p className="pl-6   hover:underline">FAQS</p>
+          </Link>
 
           <Link
             href={"https://www.earlyyears.wales/en/supporting-you-0"}
@@ -161,9 +191,6 @@ export default function Sidenav({ isOpen, toggleDrawer }) {
             <p className="pl-6  hover:underline">Supporting You</p>
           </Link>
         </div>
-        <p className="absolute bottom-2 left-[25%] text-center">
-          ©Early Years Wales
-        </p>
       </Drawer>
     </>
   );

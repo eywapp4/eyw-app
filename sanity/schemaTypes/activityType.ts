@@ -11,7 +11,7 @@ export const activityType = defineType({
       name: "title",
       type: "string",
       description: "A short title for the activity",
-      validation: (rule) => rule.max(15).required(),
+      validation: (rule) => rule.max(40).required(),
     }),
     defineField({
       name: "slug",
@@ -21,10 +21,11 @@ export const activityType = defineType({
       hidden: ({ document }) => !document?.title,
     }),
     defineField({
-      name: "abahContent",
-      title: "Active Baby At Home Content?",
+      name: "programContent",
+      title: "Program Content?",
       type: "boolean",
-      description: "Set this to active in order to hide the content",
+      description:
+        "Set this to active in order to hide Active Baby At Home and Growing Movers content",
       initialValue: false,
       validation: (rule) => rule.required(),
     }),
@@ -79,6 +80,17 @@ export const activityType = defineType({
       title: "Welsh Translation",
       type: "reference",
       to: [{ type: "gweithgaredd" }],
+    }),
+    defineField({
+      name: "resources",
+      title: "Additional Downloadable Resources",
+      type: "array",
+      of: [
+        {
+          type: "file",
+          name: "file",
+        },
+      ],
     }),
   ],
 });

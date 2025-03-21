@@ -1,11 +1,11 @@
 import { defineField, defineType, Preview } from "sanity";
-import { BsFileEarmarkText } from "react-icons/bs";
+import { PiPersonArmsSpread } from "react-icons/pi";
 
 export const adnoddType = defineType({
   name: "adnodd",
-  title: "Adnoddau",
+  title: "Gweithgareddau",
   type: "document",
-  icon: BsFileEarmarkText,
+  icon: PiPersonArmsSpread,
   fields: [
     defineField({
       name: "title",

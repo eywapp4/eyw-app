@@ -3,7 +3,7 @@ import { IoVideocamOutline } from "react-icons/io5";
 
 export const trainingType = defineType({
   name: "training",
-  title: "Training",
+  title: "Videos",
   type: "document",
   icon: IoVideocamOutline,
   fields: [
@@ -26,10 +26,11 @@ export const trainingType = defineType({
       hidden: ({ document }) => !document?.title,
     }),
     defineField({
-      name: "abahContent",
-      title: "Active Baby At Home Content?",
+      name: "programContent",
+      title: "Program Content?",
       type: "boolean",
-      description: "Set this to active in order to hide the content",
+      description:
+        "Set this to active in order to hide Active Baby At Home and Growing Movers content",
       initialValue: false,
       validation: (rule) => rule.required(),
     }),
@@ -59,6 +60,17 @@ export const trainingType = defineType({
       title: "Welsh Translation",
       type: "reference",
       to: [{ type: "hyfforddi" }],
+    }),
+    defineField({
+      name: "resources",
+      title: "Additional Downloadable Resources",
+      type: "array",
+      of: [
+        {
+          type: "file",
+          name: "file",
+        },
+      ],
     }),
   ],
 });

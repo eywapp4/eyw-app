@@ -1,4 +1,5 @@
 import { Card, CardBody, CardFooter } from "@nextui-org/react";
+import { ContentCard } from "../ui/ContentCard";
 import Link from "next/link";
 import Image from "next/image";
 import { urlFor } from "../../../sanity/lib/image";

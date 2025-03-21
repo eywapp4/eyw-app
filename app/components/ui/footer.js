@@ -38,7 +38,7 @@ export default function Footer() {
             underline: pathname.includes("/activities"),
           })}
         >
-          Activities
+          Blog
         </Link>
         <Link
           href={"/active-baby-at-home"}

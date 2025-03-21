@@ -1,11 +1,11 @@
 import { defineField, defineType } from "sanity";
-import { Footprint } from "../components/abahIcon";
+import { Sprout } from "lucide-react";
 
-export const abahType = defineType({
-  name: "abah",
-  title: "Active Baby At Home",
+export const moversType = defineType({
+  name: "movers",
+  title: "Growing Movers",
   type: "document",
-  icon: Footprint,
+  icon: Sprout,
   fields: [
     defineField({
       name: "pin",

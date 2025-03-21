@@ -7,6 +7,10 @@ import { gweithgareddType } from "./gweithgareddType";
 import { adnoddType } from "./adnoddType";
 import { hyfforddiType } from "./hyfforddiType";
 import { abahType } from "./abahType";
+import { pageIntro } from "./pageIntro";
+import { moversType } from "./moversType";
+import { faqType } from "./faqType";
+import { instructionsType } from "./instructionsType";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -17,5 +21,9 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     adnoddType,
     hyfforddiType,
     abahType,
+    pageIntro,
+    moversType,
+    faqType,
+    instructionsType,
   ],
 };
