@@ -46,7 +46,7 @@ export function Instructions({ instructions }) {
                 src={"/logos/Logo Icon.png"}
                 width={100}
                 height={100}
-                className=" top-5 right-5 md:absolute hidden"
+                className=" top-5 right-5 md:block absolute hidden"
                 alt="EYW Icon"
               />
               <Image
