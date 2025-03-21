@@ -1,7 +1,7 @@
 import ContentHeader from "../../components/ui/contentHeader";
 import { ContentCard } from "../../components/ui/ContentCard";
 import { getTrainings } from "../../lib/data";
-import { Card } from "@nextui-org/react";
+import { Card } from "@heroui/react";
 import { getIntro } from "../../lib/data";
 import { PortableText } from "next-sanity";
 import { introComponents } from "../../lib/portableTextComponents";

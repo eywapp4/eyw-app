@@ -10,7 +10,7 @@ import {
   useDisclosure,
   RadioGroup,
   Radio,
-} from "@nextui-org/react";
+} from "@heroui/react";
 import { PortableText, PortableTextBlock } from "next-sanity";
 import { introComponents } from "../../lib/portableTextComponents";
 import Image from "next/image";

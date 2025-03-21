@@ -10,7 +10,7 @@ import { BackTraining } from "../../../components/ui/backTraining";
 import { getMoversWeekly } from "../../../lib/data";
 import { PortableText } from "next-sanity";
 import { introComponents } from "../../../lib/portableTextComponents";
-import { Card } from "@nextui-org/react";
+import { Card } from "@heroui/react";
 
 export default function Page({ params: { week } }) {
   const [auth, setAuth] = useState();

@@ -1,6 +1,6 @@
 import ContentHeader from "../../components/ui/contentHeader";
 import { getFaqs } from "../../lib/data";
-import { Card } from "@nextui-org/react";
+import { Card } from "@heroui/react";
 import { Faqs } from "../../components/ui/Faqs";
 
 export default async function FAQS() {

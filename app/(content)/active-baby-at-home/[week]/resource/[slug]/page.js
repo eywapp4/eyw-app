@@ -1,4 +1,4 @@
-import { Card } from "@nextui-org/react";
+import { Card } from "@heroui/react";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import Link from "next/link";
