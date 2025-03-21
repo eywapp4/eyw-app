@@ -1,7 +1,7 @@
 "use client";
 import { PiSpeakerHighFill, PiSpeakerXFill } from "react-icons/pi";
 import { useEffect, useState } from "react";
-import { Button } from "@nextui-org/react";
+import { Button } from "@heroui/react";
 
 export function AudioDescription() {
   const [text, setText] = useState(null);

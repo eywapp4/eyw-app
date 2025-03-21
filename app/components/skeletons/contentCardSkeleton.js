@@ -1,4 +1,4 @@
-import { Card, CardBody, CardFooter } from "@nextui-org/react";
+import { Card, CardBody, CardFooter } from "@heroui/react";
 
 export function ContentCardSkeleton() {
   return (

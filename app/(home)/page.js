@@ -5,7 +5,7 @@ import {
   getInstructions,
   getIntro,
 } from "../lib/data";
-import { Card } from "@nextui-org/react";
+import { Card } from "@heroui/react";
 import { PortableText } from "next-sanity";
 import { introComponents } from "../lib/portableTextComponents";
 import { Instructions } from "../components/ui/Instructions";

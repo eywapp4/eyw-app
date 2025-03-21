@@ -1,4 +1,4 @@
-import { Card, CardBody, CardFooter } from "@nextui-org/react";
+import { Card, CardBody, CardFooter } from "@heroui/react";
 import Link from "next/link";
 import Image from "next/image";
 import { PortableText } from "next-sanity";

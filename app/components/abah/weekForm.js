@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button, Spinner } from "@nextui-org/react";
+import { Button, Spinner } from "@heroui/react";
 import { useFormStatus, useFormState } from "react-dom";
 import { useEffect, useRef } from "react";
 import toast, { Toaster } from "react-hot-toast";

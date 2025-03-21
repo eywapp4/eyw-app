@@ -1,5 +1,5 @@
 import ContentHeader from "../../components/ui/contentHeader";
-import { Card } from "@nextui-org/react";
+import { Card } from "@heroui/react";
 
 export default function Page() {
   return (

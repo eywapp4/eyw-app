@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { Button } from "@nextui-org/react";
+import { Button } from "@heroui/react";
 import { IoMenu } from "react-icons/io5";
 import { useState } from "react";
 
