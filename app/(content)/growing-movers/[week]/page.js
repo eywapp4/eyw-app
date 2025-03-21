@@ -7,7 +7,10 @@ import VideoCard from "../../../components/abah/videoCard";
 import WeekForm from "../../../components/abah/weekForm";
 import { Back } from "../../../components/ui/back";
 import { BackTraining } from "../../../components/ui/backTraining";
-import { getAbahWeekly } from "../../../lib/data";
+import { getMoversWeekly } from "../../../lib/data";
+import { PortableText } from "next-sanity";
+import { introComponents } from "../../../lib/portableTextComponents";
+import { Card } from "@nextui-org/react";
 
 export default function Page({ params: { week } }) {
   const [auth, setAuth] = useState();
@@ -16,7 +19,7 @@ export default function Page({ params: { week } }) {
   useEffect(() => {
     const updateContent = async () => {
       if (auth) {
-        const content = await getAbahWeekly(week);
+        const content = await getMoversWeekly(week);
         setContent(content);
       }
     };
@@ -52,7 +55,7 @@ export default function Page({ params: { week } }) {
           </div>
           <div className="flex flex-col w-full items-center text-center min-h-[100vh] mt-10 pb-10">
             <div className="flex flex-col w-[95vw] md:w-[75%] text-center font-semibold content-center">
-              {content?.video && (
+              {content?.video ? (
                 <>
                   <p className="text-3xl md:text-4xl  text-eywnavy-1000 md:mt-20 mt-0 md:mb-4">
                     This Week&apos;s Video
@@ -62,6 +65,18 @@ export default function Page({ params: { week } }) {
                     intro={content.introduction}
                   />
                 </>
+              ) : (
+                <Card
+                  shadow="lg"
+                  className="flex flex-col md:w-[75%] self-center text-pretty md:text-justify gap-6 text-lg text-eywnavy-1000 mb-10 font-semibold md:mt-0 md:p-10 pt-6"
+                >
+                  <div className="flex flex-col w-full text-pretty md:text-justify text-large px-8 md:px-10  ">
+                    <PortableText
+                      value={content.introduction}
+                      components={introComponents}
+                    />
+                  </div>
+                </Card>
               )}
               {content?.resources && (
                 <>
@@ -72,7 +87,7 @@ export default function Page({ params: { week } }) {
                     {content.resources.map((resource, i) => (
                       <ContentCard
                         key={i}
-                        href={`/active-baby-at-home/${week}/resource/${resource.slug}`}
+                        href={`/growing-movers/${week}/resource/${resource.slug}`}
                         src={resource.imageURL}
                         title={resource.title}
                       />
@@ -89,7 +104,7 @@ export default function Page({ params: { week } }) {
                     {content.activities.map((activity, i) => (
                       <ContentCard
                         key={i}
-                        href={`/active-baby-at-home/${week}/activity/${activity.slug}`}
+                        href={`/growing-movers/${week}/activity/${activity.slug}`}
                         src={activity.imageURL}
                         title={activity.title}
                       />

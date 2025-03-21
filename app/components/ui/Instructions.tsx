@@ -23,7 +23,6 @@ export function Instructions({ instructions }) {
 
   useEffect(() => {
     setTimeout(() => {
-      console.log("Should be open");
       onOpen();
     }, 500);
   }, [onOpen]);

@@ -11,7 +11,7 @@ export const activityType = defineType({
       name: "title",
       type: "string",
       description: "A short title for the activity",
-      validation: (rule) => rule.max(15).required(),
+      validation: (rule) => rule.max(40).required(),
     }),
     defineField({
       name: "slug",
