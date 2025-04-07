@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import { ContentCard } from "../../../components/ui/ContentCard";
 import VideoCard from "../../../components/abah/videoCard";
-import WeekForm from "../../../components/abah/weekForm";
+import WeekForm from "../../../components/movers/weekForm";
 import { Back } from "../../../components/ui/back";
 import { BackTraining } from "../../../components/ui/backTraining";
 import { getMoversWeekly } from "../../../lib/data";

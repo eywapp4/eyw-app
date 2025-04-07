@@ -3,12 +3,12 @@ import { Button, Spinner } from "@heroui/react";
 import { useFormStatus, useFormState } from "react-dom";
 import { useEffect, useRef } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { abahAuth } from "../../lib/actions";
+import { moversAuth } from "../../lib/actions";
 
 export default function WeekForm({ setAuth, week }) {
   const ref = useRef(null);
 
-  const [state, dispatch] = useFormState(abahAuth.bind(null, week), {
+  const [state, dispatch] = useFormState(moversAuth.bind(null, week), {
     isError: null,
     response: null,
   });
