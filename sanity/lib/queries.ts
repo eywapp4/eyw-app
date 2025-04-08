@@ -95,3 +95,8 @@ export const GET_FAQS = defineQuery(`*[_type == "faqs"]{faqs}`);
 export const GET_INSTRUCTIONS = defineQuery(
   `*[_type == "instructions"][0]{instructions}`
 );
+
+//get teh blog type data
+export const GET_BLOGS = defineQuery(
+  `*[_type == 'blog']| order(_createdAt desc){ link, title, "imageURL": cardImage.asset->url}`
+);

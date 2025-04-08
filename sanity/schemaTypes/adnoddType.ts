@@ -3,7 +3,7 @@ import { PiPersonArmsSpread } from "react-icons/pi";
 
 export const adnoddType = defineType({
   name: "adnodd",
-  title: "Gweithgareddau",
+  title: "Adnodd",
   type: "document",
   icon: PiPersonArmsSpread,
   fields: [
@@ -76,16 +76,16 @@ export const adnoddType = defineType({
         },
       ],
     }),
-    defineField({
-      name: "relatedActivities",
-      title: "Related Activities",
-      type: "array",
-      of: [
-        {
-          type: "reference",
-          to: [{ type: "activity" }],
-        },
-      ],
-    }),
+    // defineField({
+    //   name: "relatedActivities",
+    //   title: "Related Activities",
+    //   type: "array",
+    //   of: [
+    //     {
+    //       type: "reference",
+    //       to: [{ type: "activity" }],
+    //     },
+    //   ],
+    // }),
   ],
 });

@@ -4,7 +4,7 @@ import { BsFileEarmarkText } from "react-icons/bs";
 
 export const gweithgareddType = defineType({
   name: "gweithgaredd",
-  title: "Blog",
+  title: "Gweithgaredd",
   type: "document",
   icon: BsFileEarmarkText,
   fields: [

@@ -52,16 +52,16 @@ export const moversType = defineType({
         },
       ],
     }),
-    defineField({
-      name: "activities",
-      type: "array",
-      of: [
-        {
-          type: "reference",
-          to: [{ type: "activity" }],
-        },
-      ],
-    }),
+    // defineField({
+    //   name: "activities",
+    //   type: "array",
+    //   of: [
+    //     {
+    //       type: "reference",
+    //       to: [{ type: "activity" }],
+    //     },
+    //   ],
+    // }),
     defineField({
       name: "video",
       title: "Training Video",

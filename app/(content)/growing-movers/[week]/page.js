@@ -95,7 +95,7 @@ export default function Page({ params: { week } }) {
                   </div>
                 </>
               )}
-              {content?.activities && (
+              {/* {content?.activities && (
                 <>
                   <p className="text-3xl md:text-4xl  text-eywnavy-1000 md:mt-20 mt-10 mb-8 md:mb-8">
                     Activities
@@ -111,7 +111,7 @@ export default function Page({ params: { week } }) {
                     ))}
                   </div>
                 </>
-              )}
+              )} */}
             </div>
           </div>
         </>

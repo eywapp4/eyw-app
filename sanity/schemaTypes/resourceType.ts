@@ -3,7 +3,7 @@ import { PiPersonArmsSpread } from "react-icons/pi";
 
 export const resourceType = defineType({
   name: "resource",
-  title: "Activities",
+  title: "Resources",
   type: "document",
   icon: PiPersonArmsSpread,
   fields: [
@@ -85,17 +85,17 @@ export const resourceType = defineType({
         },
       ],
     }),
-    defineField({
-      name: "relatedActivities",
-      title: "Related Activities",
-      type: "array",
-      of: [
-        {
-          type: "reference",
-          to: [{ type: "activity" }],
-        },
-      ],
-    }),
+    // defineField({
+    //   name: "relatedActivities",
+    //   title: "Related Activities",
+    //   type: "array",
+    //   of: [
+    //     {
+    //       type: "reference",
+    //       to: [{ type: "activity" }],
+    //     },
+    //   ],
+    // }),
     defineField({
       name: "translation",
       title: "Welsh Translation",

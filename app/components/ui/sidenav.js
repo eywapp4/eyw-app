@@ -54,7 +54,7 @@ export default function Sidenav({ isOpen, toggleDrawer }) {
           </Link>
 
           <Link
-            href={"/activities"}
+            href={"/blog"}
             className="flex flex-row items-center mb-6 text-eywblue-1000"
           >
             <BsFileEarmarkText size={46} />
@@ -144,7 +144,7 @@ export default function Sidenav({ isOpen, toggleDrawer }) {
           </Link>
 
           <Link
-            href={"/activities"}
+            href={"/blog"}
             className="flex flex-row items-center mb-6 text-eywblue-1000"
           >
             <BsFileEarmarkText size={46} />

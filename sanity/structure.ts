@@ -7,11 +7,12 @@ export const structure: StructureResolver = (S) =>
   S.list()
     .title("Content")
     .items([
-      S.documentTypeListItem("activity"),
+      // S.documentTypeListItem("activity"),
       S.documentTypeListItem("resource"),
       S.documentTypeListItem("training"),
+      S.documentTypeListItem("blog"),
       S.divider(),
-      S.documentTypeListItem("gweithgaredd"),
+      // S.documentTypeListItem("gweithgaredd"),
       S.documentTypeListItem("adnodd"),
       S.documentTypeListItem("hyfforddi"),
       S.divider(),

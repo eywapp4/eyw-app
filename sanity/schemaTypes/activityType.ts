@@ -3,7 +3,7 @@ import { BsFileEarmarkText } from "react-icons/bs";
 
 export const activityType = defineType({
   name: "activity",
-  title: "Blog",
+  title: "Activity",
   type: "document",
   icon: BsFileEarmarkText,
   fields: [
