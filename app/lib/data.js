@@ -253,5 +253,6 @@ export async function getBlogs() {
     return blogs;
   } catch (error) {
     console.log(error);
+    return [];
   }
 }

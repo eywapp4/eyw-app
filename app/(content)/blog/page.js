@@ -7,8 +7,9 @@ import { ContentCard } from "../../components/ui/ContentCard";
 
 export default async function Blog() {
   const blogs = await getBlogs();
+  console.log(blogs);
   const introData = await getIntro("blog");
-  let intro;
+  let intro = null;
   if (introData) intro = introData.blog;
   return (
     <>
