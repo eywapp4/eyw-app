@@ -250,8 +250,9 @@ export async function getInstructions() {
 export async function getBlogs() {
   try {
     const blogs = await client.fetch(GET_BLOGS, {}, options);
-    return blogs;
+    return blogs || [];
   } catch (error) {
     console.log(error);
+    return [];
   }
 }
