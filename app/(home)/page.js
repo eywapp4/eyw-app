@@ -43,7 +43,7 @@ export default async function Home() {
               />
             ))}
         </div>
-        {blogs.length > 0 && (
+        {/* {blogs.length > 0 && (
           <>
             <p className="text-3xl md:text-4xl text-eywnavy-1000 mt-10">Blog</p>
             <div className="flex flex-row gap-6 flex-wrap justify-center">
@@ -58,7 +58,7 @@ export default async function Home() {
               ))}
             </div>
           </>
-        )}
+        )} */}
       </div>
       <Instructions instructions={instructions} />
     </div>

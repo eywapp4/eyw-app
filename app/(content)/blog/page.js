@@ -29,7 +29,7 @@ export default async function Blog() {
               </div>
             </Card>
           )}
-          {blogs.length > 0 && (
+          {blogs && blogs.length > 0 && (
             <div className="flex flex-row  gap-6 flex-wrap justify-center">
               {blogs.map((blog, i) => (
                 <ContentCard
