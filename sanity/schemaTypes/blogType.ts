@@ -22,6 +22,7 @@ export const blogType = defineType({
       name: "link",
       type: "string",
       description: "The link to an external blog post",
+      validation: (rule) => rule.required(),
     }),
   ],
 });
