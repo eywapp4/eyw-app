@@ -29,9 +29,9 @@ export default async function Blog() {
               </div>
             </Card>
           )}
-          <div className="flex flex-row  gap-6 flex-wrap justify-center">
-            {blogs &&
-              blogs.map((blog, i) => (
+          {blogs.length > 0 && (
+            <div className="flex flex-row  gap-6 flex-wrap justify-center">
+              {blogs.map((blog, i) => (
                 <ContentCard
                   key={i}
                   href={blog.link}
@@ -40,7 +40,8 @@ export default async function Blog() {
                   isExternal
                 />
               ))}
-          </div>
+            </div>
+          )}
         </div>
       </div>
     </>
