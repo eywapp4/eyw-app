@@ -1,6 +1,6 @@
 import { ContentCard } from "../components/ui/ContentCard";
 import {
-  getHomeActivities,
+  getBlogs,
   getHomeResources,
   getInstructions,
   getIntro,
@@ -12,8 +12,8 @@ import { Instructions } from "../components/ui/Instructions";
 
 export default async function Home() {
   const resources = await getHomeResources();
-  const activities = await getHomeActivities();
   const instructions = await getInstructions();
+  const blogs = await getBlogs();
   const introData = await getIntro("home");
   let intro;
   if (introData) intro = introData.home;
@@ -45,13 +45,14 @@ export default async function Home() {
         </div>
         <p className="text-3xl md:text-4xl text-eywnavy-1000 mt-10">Blog</p>
         <div className="flex flex-row gap-6 flex-wrap justify-center">
-          {activities &&
-            activities.map((activity, i) => (
+          {blogs &&
+            blogs.map((blog, i) => (
               <ContentCard
                 key={i}
-                href={`/activities/${activity.slug.current}`}
-                src={activity.imageURL}
-                title={activity.title}
+                href={blog.link}
+                src={blog.imageURL}
+                title={blog.title}
+                isExternal
               />
             ))}
         </div>
