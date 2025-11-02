@@ -12,20 +12,22 @@ import { moversType } from "./moversType";
 import { faqType } from "./faqType";
 import { instructionsType } from "./instructionsType";
 import { blogType } from "./blogType";
+import { eventType } from "./eventType";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [
-    // activityType,
-    resourceType,
-    trainingType,
-    // gweithgareddType,
-    adnoddType,
-    hyfforddiType,
-    abahType,
-    pageIntro,
-    moversType,
-    faqType,
-    instructionsType,
-    blogType,
-  ],
+	types: [
+		// activityType,
+		resourceType,
+		trainingType,
+		// gweithgareddType,
+		adnoddType,
+		hyfforddiType,
+		abahType,
+		pageIntro,
+		moversType,
+		faqType,
+		instructionsType,
+		blogType,
+		eventType,
+	],
 };

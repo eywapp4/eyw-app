@@ -5,18 +5,22 @@ import {
 	getHomeResources,
 	getInstructions,
 	getIntro,
+	getLatestEvent,
 } from "../lib/data";
 import { Button, Card } from "@heroui/react";
 import { PortableText } from "next-sanity";
 import { introComponents } from "../lib/portableTextComponents";
 import { Instructions } from "../components/ui/Instructions";
 import Link from "next/link";
+import { UpcomingCard } from "../components/upcoming/upcomingCard";
 
 export default async function Home() {
 	const resources = await getHomeResources();
 	const instructions = await getInstructions();
 
 	const blogs = await getHomeBlogs();
+
+	const latestEvent = await getLatestEvent();
 
 	const introData = await getIntro("home");
 	let intro;
@@ -33,6 +37,24 @@ export default async function Home() {
 							<PortableText value={intro} components={introComponents} />
 						</div>
 					</Card>
+				)}
+				{latestEvent && (
+					<div className="flex flex-col gap-8">
+						<p className="text-3xl md:text-4xl  text-eywnavy-1000">
+							Latest Event
+						</p>
+
+						<UpcomingCard event={latestEvent} />
+
+						{/* <div className="flex w-full">
+							<Link
+								href={"/events"}
+								className="rounded-lg bg-eywnavy-1000 text-white px-4 py-2 mx-auto hover:bg-eywnavy-750"
+							>
+								View More
+							</Link>
+						</div> */}
+					</div>
 				)}
 				{resources && resources.length > 0 && (
 					<div className="flex flex-col gap-8">
@@ -87,6 +109,7 @@ export default async function Home() {
 					</div>
 				)}
 			</div>
+
 			<Instructions instructions={instructions} />
 		</div>
 	);

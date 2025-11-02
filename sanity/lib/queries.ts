@@ -100,7 +100,15 @@ export const GET_INSTRUCTIONS = defineQuery(
 	`*[_type == "instructions"][0]{instructions}`
 );
 
-//get teh blog type data
+//get the blog type data
 export const GET_BLOGS = defineQuery(
 	`*[_type == 'blog']| order(_createdAt desc){ link, title, "imageURL": cardImage.asset->url}`
+);
+
+export const GET_UPCOMING_EVENTS = defineQuery(
+	`*[_type == 'event' && !(_id in path("drafts.**"))]| order(_updatedAt desc){ eventName, eventDescription, eventLink, eventDate, "eventImage": eventImage.asset->url}`
+);
+
+export const GET_LATEST_EVENT = defineQuery(
+	`*[_type == 'event' && !(_id in path("drafts.**"))]| order(_updatedAt desc)[0]{ eventName, eventDescription, eventLink, eventDate, "eventImage": eventImage.asset->url}`
 );

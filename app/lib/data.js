@@ -23,6 +23,8 @@ import {
 	GET_INSTRUCTIONS,
 	GET_BLOGS,
 	HOME_BLOGS_QUERY,
+	GET_UPCOMING_EVENTS,
+	GET_LATEST_EVENT,
 } from "../../sanity/lib/queries";
 
 const options = { next: { revalidate: 30 } };
@@ -262,6 +264,24 @@ export async function getHomeBlogs() {
 	try {
 		const homeBlogs = await client.fetch(HOME_BLOGS_QUERY, {}, options);
 		return homeBlogs;
+	} catch (error) {
+		console.error(error);
+	}
+}
+
+export async function getUpcomingEvents() {
+	try {
+		const events = await client.fetch(GET_UPCOMING_EVENTS, {}, options);
+		return events;
+	} catch (error) {
+		console.error(error);
+	}
+}
+
+export async function getLatestEvent() {
+	try {
+		const latest = await client.fetch(GET_LATEST_EVENT, {}, options);
+		return latest;
 	} catch (error) {
 		console.error(error);
 	}
