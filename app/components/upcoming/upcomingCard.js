@@ -1,10 +1,8 @@
-import { Card } from "@heroui/react";
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export function UpcomingCard({ event }) {
-	console.log(event);
 	const { eventDescription, eventImage, eventLink, eventName, eventDate } =
 		event;
 	return (
