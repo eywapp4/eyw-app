@@ -18,7 +18,7 @@ export default async function Blog() {
 				textColour={"eywnavy-1000"}
 				bgColour={"from-eywteal-500"}
 			/>
-			<div className="flex w-full flex-col  items-center pb-20">
+			<div className="flex w-full flex-col items-center pb-20">
 				<div className="flex flex-col gap-6 md:gap-10 w-[90%] md:w-[75%] ">
 					{intro && (
 						<Card
@@ -31,7 +31,7 @@ export default async function Blog() {
 						</Card>
 					)}
 					{blogs && blogs.length > 0 && (
-						<div className="flex flex-row  gap-6 flex-wrap justify-center">
+						<div className="grid grid-cols-4 gap-6 flex-wrap justify-center ">
 							{blogs.map((blog, i) => (
 								<ContentCard
 									key={i}
