@@ -37,7 +37,7 @@ export default function Sidenav({ isOpen, toggleDrawer }) {
 			href: "events",
 			label: "Events",
 			Icon: PiCalendarBlank,
-			colorClass: "",
+			colorClass: "text-eywyellow-1000",
 		},
 		// section divider here
 		{
